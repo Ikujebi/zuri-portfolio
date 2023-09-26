@@ -10,12 +10,5 @@ export default defineConfig({
       plugins: [tailwindcss, autoprefixer],
     },
   },
-  optimizeDeps: {
-    include: [
-      'firebase/app',
-      'firebase/auth',
-      'firebase/functions',
-      'firebase-admin/app'
-    ],
-  },
+
 });
