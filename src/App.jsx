@@ -20,7 +20,8 @@ function App() {
  
  
   return (
-    <div className='lato'>
+    <Routes >
+      <Route />
       <CustomNavbar />
       <Header />
       <Services/>
@@ -29,7 +30,7 @@ function App() {
       <Contact/>
       <Footer/>
       
-    </div>
+    </Routes>
   )
 }
 
