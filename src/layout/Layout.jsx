@@ -2,7 +2,7 @@
 import '../../src/index.css';
 import '../../src/App.css';
 import Header from './Home'
-import CustomNavbar from '.sideBar'
+import CustomNavbar from './sideBar'
 import Portfolio from './Portfolio'
 import Services from './MyServices';
 import Stack from './WhatIKnow';

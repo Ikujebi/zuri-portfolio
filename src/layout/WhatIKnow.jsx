@@ -63,7 +63,7 @@ function Stack() {
   return (
     <div id="portfolio" className="flex flex-col justify-center items-center">
       <div className="container">
-        <div className="section-title text-center font-bold text-2xl">
+        <div className="section-title mb-5 text-center font-bold text-2xl">
           <h2>WHAT I KNOW</h2>
         </div>
       </div>
@@ -72,7 +72,7 @@ function Stack() {
         <div className="row pointer">
           <div className=" pointer">
             <div className="portfolio-list pointer">
-              <ul className="nav list-unstyled mb-4 flex justify-center items-center gap-4 text-gray-600 font-bold cursor-pointer " id="portfolio-flters">
+              <ul className="nav list-unstyled mb-[4rem] flex justify-center items-center gap-4 text-gray-600 font-bold cursor-pointer " id="portfolio-flters">
                 <li
                   className={`filter ${selectedFilter === 'all' ? 'filter-active' : ''} `}
                   data-filter="all"

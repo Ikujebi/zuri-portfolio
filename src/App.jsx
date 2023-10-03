@@ -11,6 +11,7 @@ import Services from './layout/MyServices';
 import Stack from './layout/WhatIKnow';
 import Contact from './layout/Contact'
 import Footer from './layout/Footer'
+import  Layout  from './layout/Layout'
 
 
 
@@ -21,15 +22,14 @@ function App() {
  
   return (
     <Routes >
-      <Route />
-      <CustomNavbar />
-      <Header />
-      <Services/>
-      <Stack/>
-      <Portfolio/>
-      <Contact/>
-      <Footer/>
-      
+      <Route path='/' element={<Layout/>} />
+      <Route path='/nav' element={<CustomNavbar/>} />
+      <Route path='/header' element={<Header/>} />
+      <Route path='/services' element={<Services/>} />
+      <Route path='/stack' element={<Stack/>} />
+      <Route path='/portfolio' element={<Portfolio/>} />
+      <Route path='/contact' element={<Contact/>} />
+      <Route path='/footer' element={<Footer/>} />
     </Routes>
   )
 }

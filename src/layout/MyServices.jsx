@@ -60,7 +60,7 @@ const Services = () => {
     autoplaySpeed: 5000, // Set autoplay interval to 5000 milliseconds (5 seconds)
   };
   return (
-    <div id="services" className="flex justify-center align-center px-2">
+    <div id="services" className="flex justify-center align-center mb-[5rem] px-2">
     <div className="container">
       <Slider {...sliderSettings}>
         {slides.map((item, itemIndex) => (
@@ -75,7 +75,7 @@ const Services = () => {
             <Card className="service-card h-[24.9rem]">
               <img src={item.image} alt="service" className="w-[7rem] xl:text-[1.2rem] lg:text-[1.2rem] md:text-[1rem] text-[.7rem] px-1 xl:w-[15rem] lg:w-[15rem] md:w-[15rem] mb-4 xl:h-[15rem] lg:h-[15rem] md:h-[15rem] h-[8rem]" />
               <h3 className="text-lg font-semibold">{item.title}</h3>
-              <p className="text-gray-600 flex-grow xl:text-[1.2rem] lg:text-[1.2rem] md:text-[1rem] text-[.7rem]">{item.description}</p>
+              <p className="text-gray-600 flex-grow xl:text-[1.2rem] lg:text-[1.2rem] md:text-[.85rem] text-[.7rem]">{item.description}</p>
             </Card>
           </motion.div>
         ))}

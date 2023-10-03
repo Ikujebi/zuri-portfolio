@@ -74,10 +74,10 @@ function Portfolio() {
       ];
 
   return (
-    <div id="journal" className="flex flex-col justify-center items-center px-2">
+    <div id="journal" className="flex flex-col  justify-center items-center px-2">
       <div className="container">
         <div className="section-title text-center">
-          <h2>WHAT I HAVE DONE</h2>
+          <h2 className=' text-2xl mb-8 font-bold text-gray-700'>WHAT I HAVE DONE</h2>
         </div>
       </div>
 
@@ -91,10 +91,10 @@ function Portfolio() {
                     <img src={entry.imageSrc} alt="img" />
                   </Link>
                   <div className="journal-txt">
-                    <h4>
+                    <h4 className='text-grey-700'>
                       <Link to={entry.link}>{entry.title}</Link>
                     </h4>
-                    <p className="separator">{entry.description}</p>
+                    <p className="separator text-grey-600">{entry.description}</p>
                   </div>
                 </div>
               </div>

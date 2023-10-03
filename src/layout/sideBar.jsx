@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import drop from '../assets/images/drop1.png';
+import { Link } from 'react-router-dom';
 
 const SideBar = () => {
   const [isSidebarVisible, setSidebarVisible] = useState(false);
@@ -7,11 +8,13 @@ const SideBar = () => {
   const componentRef = useRef(null);
 
   const options = [
-    { label: 'Home', value: 'home' },
-    { label: 'About', value: 'about' },
-    { label: 'Portfolio', value: 'portfolio' },
-    { label: 'Blog', value: 'blog' },
-    { label: 'Contact', value: 'contact' },
+    { label: 'Home', value: 'home', href:"header" },
+    { label: 'About', value: 'about' ,href:"header"},
+    { label: 'Services', value: 'services',href:'services' },
+    { label: 'Portfolio', value: 'portfolio',href:'portfolio' },
+    { label: 'Stack', value: 'stack',href:'stack' },
+    { label: 'Contact', value: 'contact' , href: 'contact'},
+    { label: 'Footer', value: 'footer' , href: 'footer'},
   ];
 
   const toggleSidebar = () => {
@@ -88,16 +91,19 @@ const SideBar = () => {
                 {isDropdownOpen && (
                   <ul className="absolute top-full left-0 mt-2 bg-white border border-gray-300 rounded-lg shadow-lg">
                     {options.map((option) => (
-                      <li
-                        key={option.value}
-                        className="px-4 py-2 cursor-pointer hover-bg-gray-200"
-                        onClick={() => {
-                          console.log(option.value);
-                          setDropdownOpen(false);
-                        }}
-                      >
-                        {option.label}
-                      </li>
+                     <li
+                     key={option.value}
+                     className="px-4 py-2 cursor-pointer hover-bg-gray-200"
+                     onClick={() => {
+                       const targetSection = document.querySelector(`#${option.href}`);
+                       if (targetSection) {
+                         targetSection.scrollIntoView({ behavior: 'smooth' });
+                         setDropdownOpen(false);
+                       }
+                     }}
+                   >
+                     {option.label}
+                   </li>
                     ))}
                   </ul>
                 )}
