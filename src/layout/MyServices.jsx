@@ -57,7 +57,7 @@ const Services = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true, // Enable autoplay
-    autoplaySpeed: 5000, // Set autoplay interval to 5000 milliseconds (5 seconds)
+    autoplaySpeed: 2000, // Set autoplay interval to 5000 milliseconds (5 seconds)
   };
   return (
     <div id="services" className="flex justify-center align-center mb-[5rem] px-2">
