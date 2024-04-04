@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'antd';
+import { IoCallOutline } from "react-icons/io5";
 import {
   FacebookOutlined,
   TwitterOutlined,
@@ -12,7 +13,9 @@ import twiter from '../assets/images/twiter.png'
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
-    const phoneNumber = '+2348137977542';
+  const emailAddress = 'ikujebikehinde@gmail.com';
+
+    const phoneNumber = "08137977542";
     const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}`;
 
   return (
@@ -20,11 +23,12 @@ const Footer = () => {
       <div className="container">
         <div className="socials-media text-center">
           <ul className="list-unstyled flex justify-center items-center gap-3">
-            <li><Link to={"https://www.facebook.com/ikujebikehinde"}><FacebookOutlined /></Link></li>
-            <li><Link to={"https://twitter.com/ikujebikehinde"}><TwitterOutlined /></Link></li>
-            <li><Link to={"https://www.instagram.com/ikujebikehinde"}><InstagramOutlined /></Link></li>
-            <li><Link to={"ikujebikehinde@gmail.com"}><GooglePlusOutlined /></Link></li>
+            <li><Link target="blank"  to={"https://www.facebook.com/ikujebikehinde"}><FacebookOutlined /></Link></li>
+            <li><Link target="blank"  to={"https://twitter.com/ikujebikehinde"}><TwitterOutlined /></Link></li>
+            <li><Link target="blank"  to={"https://www.instagram.com/ikujebikehinde"}><InstagramOutlined /></Link></li>
+            <li><Link target="_blank" to={`mailto:${emailAddress}`}><GooglePlusOutlined /></Link></li>
             <li><Link to={whatsappURL} target="_blank"><WhatsAppOutlined /></Link></li>
+            <li><Link to="tel:+2348137977542" className='flex gap-1 hover:text-green-700'> <span className='mt-1'><IoCallOutline /></span>  </Link></li>
           </ul>
         </div>
         <p>&copy; Copyrights Ayanfe. All rights reserved.</p>

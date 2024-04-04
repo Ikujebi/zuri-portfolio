@@ -38,7 +38,7 @@ const SideBar = () => {
       // Automatically close the sidebar after 5 seconds
       setTimeout(() => {
         closeSidebar();
-      }, 5000);
+      }, 10000);
     } else {
       setSidebarVisible(false);
     }
@@ -72,7 +72,7 @@ const SideBar = () => {
   return (
     <div ref={componentRef}>
       {isSidebarVisible && (
-        <nav className="bg-white py-4 w-screen top-0 fixed z-10 px-2">
+        <nav className={`bg-white py-4 w-screen  px-2  ${isSidebarVisible ? 'fixed top-0 z-10' : ''}`}>
           <div className="container mx-auto">
             <div className="flex items-center justify-between">
               <div className="logo text-gray-700 text-2xl font-bold">
