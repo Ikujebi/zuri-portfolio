@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import Typed from 'typed.js'; 
 import ayanfe from '../assets/images/ayanfe.png';
+import ayanfe2 from '../assets/images/ayanfeLinkdn.jpg';
+
 
 const Header = () => {
   const typedElement = useRef(null);
@@ -12,7 +14,8 @@ const Header = () => {
         "WebDesigner.",
         "Developer",
         "Business Expert",
-        "Project Manager"
+        "Project Manager",
+        "Digital marketter",
       ],
       typeSpeed: 50,
       startDelay: 0,
@@ -38,13 +41,13 @@ const Header = () => {
       
       <div
         id="header"
-        className="home h-screen flex items-center justify-center bg-gray-900"
+        className="home xl:mt-[2rem] 2xl:mt-[2rem] h-screen flex items-center justify-center bg-gray-900"
         style={{ backgroundImage: `url(${ayanfe})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
         <div className="container text-center">
           <div className="header-content">
             <h1 className="text-white text-4xl mb-4">I'm <span ref={typedElement}></span></h1>
-            <p className="text-gray-400">Developer, Web Developer, Business Manager</p>
+            <p className="text-gray-400">Developer, Web Developer, Business Manager,Digital marketter</p>
             <ul className="list-unstyled list-social mt-4">
               <li><a href="#"><i className="ion-social-facebook text-white"></i></a></li>
               <li><a href="#"><i className="ion-social-twitter text-white"></i></a></li>

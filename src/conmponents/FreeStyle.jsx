@@ -3,18 +3,33 @@ import { motion } from "framer-motion";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import cert1 from '../assets/images/certi01.jpg'
+import cert2 from '../assets/images/certi02.jpg'
+import cert3 from '../assets/images/certi03.jpg'
+import cert4 from '../assets/images/certi04.jpg'
+import certa1 from '../assets/images/certa01.jpg'
 
 const FreeStyle = () => {
     const pic1 =
     "https://sailab.ng/wp-content/uploads/2023/10/Group-1000004131.png";
-  const pic2 =
-    "https://sailab.ng/wp-content/uploads/2023/10/Group-1000004124-1.png";
+    const pic2 =
+    cert1;
   const pic3 =
-    "https://sailab.ng/wp-content/uploads/2023/10/Group-1000004133.png";
+    "https://sailab.ng/wp-content/uploads/2023/10/Group-1000004124-1.png";
   const pic4 =
-    "https://sailab.ng/wp-content/uploads/2023/10/Group-1000004132.png";
+    cert2;
   const pic5 =
+   cert3;
+  const pic6 =
+    "https://sailab.ng/wp-content/uploads/2023/10/Group-1000004133.png";
+  const pic7 =
+    "https://sailab.ng/wp-content/uploads/2023/10/Group-1000004132.png";
+  const pic8 =
+   cert4;
+  const pic9 =
     "https://sailab.ng/wp-content/uploads/2023/10/Group-1000004131.png";
+  const pic10 =
+    certa1;
 
     const [_index, setIndex] = useState(0);
   const slides = [
@@ -32,6 +47,18 @@ const FreeStyle = () => {
     },
     {
       image: pic5,
+    },
+    {
+      image: pic6,
+    },
+    {
+      image: pic7,
+    },
+    {
+      image: pic8,
+    },
+    {
+      image: pic9,
     },
   ];
 
@@ -61,7 +88,7 @@ const FreeStyle = () => {
     autoplaySpeed: 5000,
   };
   return (
-    <div className="container ">
+    <div className="container my-[9rem]">
     <Slider {...sliderSettings}>
       {slides.map((item, itemIndex) => (
         <motion.div
@@ -75,7 +102,7 @@ const FreeStyle = () => {
           <img
             src={item.image}
             alt="service"
-            className="w-full  px-[3rem] 2xl:px-[10rem] mb-4  xl:h-[40rem] 2xl:h-[40rem] lg:h-[30rem] md:h-[33rem] h-[17rem]"
+            className="w-full flex justify-center mx-auto md:w-[60%] xl:w-[70%] 2xl:w-[70%]   mb-4  xl:h-[40rem] 2xl:h-[40rem] lg:h-[30rem] md:h-[33rem] h-[17rem]"
           />
         </motion.div>
       ))}
