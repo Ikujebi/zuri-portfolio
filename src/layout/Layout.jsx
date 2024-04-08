@@ -8,7 +8,7 @@ import Services from './MyServices';
 import Stack from './WhatIKnow';
 import Contact from './Contact'
 import Footer from './Footer'
-import FreeStyle from '../conmponents/FreeStyle';
+import Certi from '../conmponents/CertiStyle'
 
 
 
@@ -21,7 +21,7 @@ function App() {
     <div className='lato'>
       <CustomNavbar />
       <Header />
-      <FreeStyle/>
+      <Certi/>
       <Services/>
       <Stack/>
       <Portfolio/>
