@@ -9,6 +9,7 @@ import Stack from './WhatIKnow';
 import Contact from './Contact'
 import Footer from './Footer'
 import Certi from '../conmponents/CertiStyle'
+import { NightModeProvider } from '../conmponents/NightModeContext';
 
 
 
@@ -18,6 +19,7 @@ function App() {
  
  
   return (
+    <NightModeProvider>
     <div className='lato'>
       <CustomNavbar />
       <Header />
@@ -29,6 +31,7 @@ function App() {
       <Footer/>
       
     </div>
+    </NightModeProvider>
   )
 }
 

@@ -8,8 +8,10 @@ import cert2 from '../assets/images/certi02.jpg'
 import cert3 from '../assets/images/certi03.jpg'
 import cert4 from '../assets/images/certi04.jpg'
 import certa1 from '../assets/images/certa01.jpg'
+import { useNightMode } from './NightModeContext';
 
 const FreeStyle = () => {
+  const { nightMode } = useNightMode();
     const pic1 =
     "https://sailab.ng/wp-content/uploads/2023/10/Group-1000004131.png";
     const pic2 =
@@ -88,7 +90,7 @@ const FreeStyle = () => {
     autoplaySpeed: 2000,
   };
   return (
-    <div className="container my-[9rem]">
+    <div className={nightMode ? 'navbar-dark' : 'navbar-light container my-[9rem]'}>
     <Slider {...sliderSettings}>
       {slides.map((item, itemIndex) => (
         <motion.div

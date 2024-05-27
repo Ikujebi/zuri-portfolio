@@ -8,9 +8,11 @@ import { motion } from 'framer-motion';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { useNightMode } from '../conmponents/NightModeContext';
 
 const Services = () => {
-  const [index, setIndex] = useState(0);
+  const { nightMode } = useNightMode();
+  const [_index, setIndex] = useState(0);
   const slides = [
     {
       image: webd,
@@ -60,7 +62,7 @@ const Services = () => {
     autoplaySpeed: 2000, // Set autoplay interval to 5000 milliseconds (5 seconds)
   };
   return (
-    <div id="services" className="flex justify-center align-center mb-[5rem] px-2">
+    <div id="services"className={nightMode ? 'navbar-dark' : 'navbar-light   flex justify-center align-center mb-[5rem] px-2'} >
     <div className="container">
       <Slider {...sliderSettings}>
         {slides.map((item, itemIndex) => (

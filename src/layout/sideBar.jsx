@@ -70,7 +70,7 @@ const SideBar = () => {
   }, []);
 
   return (
-    <div ref={componentRef}>
+    <div ref={componentRef} >
       {isSidebarVisible && (
         <nav className={`bg-white py-4 w-screen  px-2  ${isSidebarVisible ? 'fixed top-0 z-10' : ''}`}>
           <div className="container mx-auto">

@@ -1,9 +1,7 @@
 import React from 'react'
-import { Routes, Route, Navigate  } from 'react-router-dom';
+import { Routes, Route  } from 'react-router-dom';
 import '../src/index.css';
 import '../src/App.css';
-import { useState } from 'react';
-import ayanfe from "./assets/images/ayanfe.png";
 import Header from './layout/Home'
 import CustomNavbar from './layout/sideBar'
 import Portfolio from './layout/Portfolio'
